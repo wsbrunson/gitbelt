@@ -1,0 +1,17 @@
+{
+  "name": "git-branch-manage",
+  "version": "0.1.0",
+  "description": "Git utility for managing branches",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn test"
+  },
+  "keywords": [
+    "git",
+    "help",
+    "utility",
+    "branch"
+  ],
+  "author": "Shane Brunson",
+  "license": "ISC"
+}
