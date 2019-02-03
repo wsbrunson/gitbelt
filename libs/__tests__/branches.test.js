@@ -1,14 +1,14 @@
-jest.mock("./NodeGitInterface.js");
+jest.mock("../NodeGitInterface.js");
 const {
-  getBranchesFromRepo,
-  getCurrentBranchFromRepo,
+  getAllBranches,
+  getCurrentBranch,
   deleteBranch
-} = require("./NodeGitInterface.js");
+} = require("../NodeGitInterface.js");
 const {
   getLocalBranchNames,
   deleteSelectedBranches,
   formatBranchNameForGit
-} = require("./app.js");
+} = require("../branches.js");
 
 const createRef = ({ isBranch = true, isRemote = true, name = "" } = {}) => ({
   isBranch: () => (isBranch ? 1 : 0),
@@ -21,15 +21,15 @@ const createSelectedBranchObject = ({ local = [] } = {}) => ({
 });
 
 const mockGitEnv = (references = [], currentBranch = "current branch") => {
-  getBranchesFromRepo.mockReturnValue(Promise.resolve(references));
-  getCurrentBranchFromRepo.mockReturnValue(
+  getAllBranches.mockReturnValue(Promise.resolve(references));
+  getCurrentBranch.mockReturnValue(
     Promise.resolve(formatBranchNameForGit(currentBranch))
   );
 };
 
 afterEach(() => {
-  getBranchesFromRepo.mockReset();
-  getCurrentBranchFromRepo.mockReset();
+  getAllBranches.mockReset();
+  getCurrentBranch.mockReset();
   deleteBranch.mockReset();
 });
 

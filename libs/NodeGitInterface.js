@@ -22,8 +22,10 @@ const deleteBranch = async name => {
   }
 };
 
-module.exports = {
-  getBranchesFromRepo,
-  getCurrentBranchFromRepo,
+const NodeGitInterface = {
+  getAllBranches: getBranchesFromRepo,
+  getCurrentBranch: getCurrentBranchFromRepo,
   deleteBranch
 };
+
+module.exports = NodeGitInterface;

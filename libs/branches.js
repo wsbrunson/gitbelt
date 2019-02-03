@@ -1,8 +1,8 @@
 const {
-  getBranchesFromRepo,
-  getCurrentBranchFromRepo,
+  getAllBranches,
+  getCurrentBranch,
   deleteBranch
-} = require("./NodeGitInterface");
+} = require("./NodeGitInterface.js");
 const {
   filter,
   map,
@@ -27,8 +27,8 @@ const getLocalBranchNames = async () =>
     map(formatBranchNameForDisplay),
     map(getName),
     filter(isLocalBranch),
-    filter(isCurrentBranch(await getCurrentBranchFromRepo()))
-  )(await getBranchesFromRepo());
+    filter(isCurrentBranch(await getCurrentBranch()))
+  )(await getAllBranches());
 
 const deleteSelectedBranches = compose(
   forEach(deleteBranch),

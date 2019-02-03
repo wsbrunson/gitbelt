@@ -1,22 +1,10 @@
-#!/usr/bin/env node
-const inquirer = require("inquirer");
-const { getLocalBranchNames, deleteSelectedBranches } = require("./app.js");
+const program = require("commander");
+const packageJson = require("./package.json");
 
-const run = async () => {
-  const branches = await getLocalBranchNames();
+// setup commands
+require("./commands")(program);
 
-  inquirer
-    .prompt([
-      {
-        type: "checkbox",
-        choices: branches,
-        name: "deleteLocal",
-        message: "Branches to delete"
-      }
-    ])
-    .then(deleteSelectedBranches)
-    // eslint-disable-next-line no-console
-    .catch(console.error);
-};
-
-run();
+program
+  .version(packageJson.version)
+  .on("--help", () => {})
+  .parse(process.argv);
