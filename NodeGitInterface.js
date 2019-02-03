@@ -14,8 +14,10 @@ const getCurrentBranchFromRepo = async () =>
 const deleteBranch = async name => {
   try {
     const code = await NodeGit.Reference.remove(await getRepo(), name);
+    // eslint-disable-next-line no-console
     console.log(name + " was deleted", code);
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error(error);
   }
 };

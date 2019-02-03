@@ -15,6 +15,7 @@ const run = async () => {
       }
     ])
     .then(deleteSelectedBranches)
+    // eslint-disable-next-line no-console
     .catch(console.error);
 };
 
