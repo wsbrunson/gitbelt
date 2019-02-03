@@ -1,7 +1,7 @@
 {
   "name": "gitbelt",
   "version": "0.1.0",
-  "description": "Git utility belt that provides user-friendly helpers for managing git",
+  "description": "Utility belt for user-friendly management of git",
   "main": "index.js",
   "scripts": {
     "test": "jest"
