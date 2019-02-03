@@ -18,7 +18,9 @@
   "author": "Shane Brunson",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/config-conventional": "^7.5.0",
     "babel-eslint": "^10.0.1",
+    "commitlint": "^7.5.0",
     "eslint": "^5.13.0",
     "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-prettier": "^3.0.1",
@@ -33,10 +35,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test"
+      "pre-commit": "yarn test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "release": {
     "branch": "master"
-  }
+  },
+  "commitlint": { "extends": ["@commitlint/config-conventional"] }
 }
