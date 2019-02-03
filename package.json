@@ -4,6 +4,10 @@
   "description": "Utility belt for user-friendly management of git",
   "main": "index.js",
   "repository": "https://github.com/wsbrunson/gitbelt",
+  "engines": {
+    "node" : ">=10.12.0"
+    }
+  },
   "scripts": {
     "test": "jest"
   },
