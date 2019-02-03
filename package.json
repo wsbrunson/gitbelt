@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Utility belt for user-friendly management of git",
   "main": "index.js",
+  "repository": "https://github.com/wsbrunson/gitbelt",
   "scripts": {
     "test": "jest"
   },
