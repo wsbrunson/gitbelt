@@ -1,12 +1,21 @@
 #!/usr/bin/env node
 const inquirer = require("inquirer");
-const { getLocalBranchNames } = require("./app.js");
+const { getLocalBranchNames, deleteSelectedBranches } = require("./app.js");
 
-getLocalBranchNames().then(branches => {
+const run = async () => {
+  const branches = await getLocalBranchNames();
+
   inquirer
     .prompt([
-      { type: "checkbox", choices: branches, name: "Branches available" }
+      {
+        type: "checkbox",
+        choices: branches,
+        name: "deleteLocal",
+        message: "Branches to delete"
+      }
     ])
-    .then(console.log)
+    .then(deleteSelectedBranches)
     .catch(console.error);
-});
+};
+
+run();

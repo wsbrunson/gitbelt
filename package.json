@@ -1,20 +1,15 @@
 {
-  "name": "git-branch-manage",
+  "name": "gitbelt",
   "version": "0.1.0",
-  "description": "Git utility for managing branches",
+  "description": "Git utility belt that provides user-friendly helpers for managing git",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
   "bin": {
-    "git-branch-guide": "index.js"
+    "gitbelt": "index.js"
   },
-  "keywords": [
-    "git",
-    "help",
-    "utility",
-    "branch"
-  ],
+  "keywords": ["git", "help", "utility", "branch", "belt", "delete"],
   "author": "Shane Brunson",
   "license": "ISC",
   "devDependencies": {
