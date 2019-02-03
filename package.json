@@ -5,8 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/wsbrunson/gitbelt",
   "engines": {
-    "node" : ">=10.12.0"
-    }
+    "node": ">=10.12.0"
   },
   "scripts": {
     "test": "jest"
