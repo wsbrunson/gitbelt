@@ -28,5 +28,8 @@
     "inquirer": "^6.2.2",
     "nodegit": "^0.24.0",
     "ramda": "^0.26.1"
+  },
+  "release": {
+    "branch": "master"
   }
 }
