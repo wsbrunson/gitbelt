@@ -1,30 +1,31 @@
-import inquirer from "inquirer";
-import { git } from "./git";
-import { logger } from "./logger";
+import inquirer from 'inquirer'
+import { git } from './git'
+import { logger } from './logger'
 
-export const deleteBranches = async () => {
-  const remoteBranches = (await git.branch(["-r"])).all.map((branchName) =>
-    branchName.replace("origin/", "")
-  );
-  const { all: localBranches, current } = await git.branchLocal();
+export const deleteBranches = async (): Promise<void> => {
+  const remoteBranches = (await git.branch(['-r'])).all.map((branchName) =>
+    branchName.replace('origin/', '')
+  )
+  const { all: localBranches, current } = await git.branchLocal()
 
   const branchesToDelete = localBranches
     .filter(
       (branchName) =>
         !remoteBranches.includes(branchName) && current !== branchName
     )
-    .map((branchName) => ({ name: branchName, checked: true }));
+    .map((branchName) => ({ name: branchName, checked: true }))
 
   const { branches } = await inquirer.prompt([
     {
-      type: "checkbox",
+      type: 'checkbox',
       choices: branchesToDelete,
-      name: "branches",
-      message: "Which branches would you like to delete?",
-    },
-  ]);
+      name: 'branches',
+      message: 'Which branches would you like to delete?'
+    }
+  ])
 
-  logger.info(`Deleting the following branches: ${branches.join(", ")}`);
+  const branchNamesString: string = branches.join(', ')
+  logger.info(`Deleting the following branches: ${branchNamesString}`)
 
-  git.deleteLocalBranches(branches);
-};
+  await git.deleteLocalBranches(branches)
+}

@@ -1,3 +1,3 @@
-const { logger } = require("./src/logger");
+const { logger } = require('./src/logger')
 
-logger.configure({ silent: true });
+logger.configure({ silent: true })

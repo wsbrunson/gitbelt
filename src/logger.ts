@@ -1,4 +1,4 @@
-import { createLogger, format, transports } from "winston";
+import { createLogger, format, transports } from 'winston'
 
 const logLevels = {
   fatal: 0,
@@ -6,15 +6,15 @@ const logLevels = {
   warn: 2,
   info: 3,
   debug: 4,
-  trace: 5,
-};
+  trace: 5
+}
 
 export const logger = createLogger({
   levels: logLevels,
-  level: "info",
+  level: 'info',
   transports: [
     new transports.Console({
-      format: format.combine(format.colorize(), format.simple()),
-    }),
-  ],
-});
+      format: format.combine(format.colorize(), format.simple())
+    })
+  ]
+})

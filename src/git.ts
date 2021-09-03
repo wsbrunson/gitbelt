@@ -1,3 +1,3 @@
-import simpleGit from "simple-git";
+import simpleGit from 'simple-git'
 
-export const git = simpleGit();
+export const git = simpleGit()
