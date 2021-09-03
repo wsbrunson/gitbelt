@@ -1,0 +1,9 @@
+// For configuration documentation see http://romefrontend.dev/#project-configuration
+name: "gitbelt"
+lint: {
+	ignore: [
+		".yarn"
+		".pnp.cjs"
+]
+}
+root: true
