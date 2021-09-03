@@ -1,6 +1,6 @@
 {
   "name": "gitbelt",
-  "version": "0.0.3",
+  "version": "0.2.0",
   "description": "git utilities to speed up your life",
   "license": "ISC",
   "main": "./lib/index.js",
