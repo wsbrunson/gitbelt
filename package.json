@@ -14,8 +14,7 @@
     "local": "npm i -g && gitbelt",
     "lint": "ts-standard --fix",
     "test": "jest",
-    "release": "np",
-    "prepublishOnly": "yarn build",
+    "release": "yarn build && np",
     "publish-test": "yarn lint && yarn test"
   },
   "devDependencies": {
