@@ -37,7 +37,6 @@
     "winston": "^3.3.3"
   },
   "np": {
-    "contents": "lib",
     "testScript": "publish-test"
   }
 }
