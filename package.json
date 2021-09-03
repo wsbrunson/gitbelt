@@ -2,25 +2,33 @@
   "name": "gitbelt",
   "version": "0.0.2",
   "description": "git utilities to speed up your life",
+  "license": "ISC",
   "main": "./lib/index.js",
   "bin": "./lib/index.js",
   "scripts": {
-    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "start": "nodemon --no-stdin --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
     "build": "tsc -p .",
+    "local": "npm i -g && gitbelt",
     "lint": "rome check",
-    "local": "npm i -g && gitbelt"
+    "test": "jest"
   },
   "devDependencies": {
+    "@types/inquirer": "^7.3.3",
+    "@types/jest": "^27.0.1",
     "@types/node": "^16.7.10",
     "jest": "^27.1.0",
     "nodemon": "^2.0.12",
+    "np": "^7.5.0",
     "rome": "^10.0.4-beta",
+    "ts-jest": "^27.0.5",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.2"
   },
   "dependencies": {
     "commander": "^8.1.0",
+    "inquirer": "^8.1.2",
     "path": "^0.12.7",
-    "simple-git": "^2.45.0"
+    "simple-git": "^2.45.0",
+    "winston": "^3.3.3"
   }
 }
