@@ -1,20 +1,17 @@
 {
-  "name": "gitbelt",
-  "version": "0.2.0",
+  "name": "git-util",
+  "version": "0.1.0",
   "description": "git utilities to speed up your life",
   "license": "ISC",
   "main": "./lib/index.js",
   "bin": "./lib/index.js",
-  "files": [
-    "./lib/index.js"
-  ],
   "scripts": {
     "start": "nodemon --no-stdin --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
     "build": "tsc -p .",
     "local": "npm i -g && gitbelt",
     "lint": "ts-standard --fix",
     "test": "jest",
-    "release": "yarn build && np",
+    "prepublishOnly": "yarn build",
     "publish-test": "yarn lint && yarn test"
   },
   "devDependencies": {
