@@ -8,16 +8,17 @@
   "scripts": {
     "start": "nodemon --no-stdin --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
     "build": "tsc -p .",
-    "local": "npm i -g && gitbelt",
+    "local": "ts-node ./src/index.ts",
     "lint": "ts-standard --fix",
     "test": "jest",
-    "prepublishOnly": "yarn build",
-    "publish-test": "yarn lint && yarn test"
+    "verify": "yarn lint && yarn test",
+    "prepublishOnly": "yarn verify && yarn build"
   },
   "devDependencies": {
     "@types/inquirer": "^7.3.3",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.10",
+    "@types/ramda": "^0.27.44",
     "jest": "^27.1.0",
     "nodemon": "^2.0.12",
     "np": "^7.5.0",
@@ -30,6 +31,7 @@
     "commander": "^8.1.0",
     "inquirer": "^8.1.2",
     "path": "^0.12.7",
+    "ramda": "^0.27.1",
     "simple-git": "^2.45.0",
     "winston": "^3.3.3"
   },
