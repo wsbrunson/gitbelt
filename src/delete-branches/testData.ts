@@ -1,64 +1,64 @@
 export const fakeBranchSummaryData = {
   all: [
-    "branch-to-delete-1",
-    "branch-to-delete-2",
-    "branch-to-delete-3",
-    "current-branch",
-    "main",
-    "remotes/origin/current-branch",
-    "remotes/origin/main",
-    "remotes/origin/remote-branch",
+    'branch-to-delete-1',
+    'branch-to-delete-2',
+    'branch-to-delete-3',
+    'current-branch',
+    'main',
+    'remotes/origin/current-branch',
+    'remotes/origin/main',
+    'remotes/origin/remote-branch'
   ],
   branches: {
-    "branch-to-delete-1": {
+    'branch-to-delete-1': {
       current: false,
-      name: "branch-to-delete-1",
-      commit: "785b109",
-      label: "new work",
+      name: 'branch-to-delete-1',
+      commit: '785b109',
+      label: 'new work'
     },
-    "branch-to-delete-2": {
+    'branch-to-delete-2': {
       current: false,
-      name: "branch-to-delete-2",
-      commit: "785b109",
-      label: "new work",
+      name: 'branch-to-delete-2',
+      commit: '785b109',
+      label: 'new work'
     },
-    "branch-to-delete-3": {
+    'branch-to-delete-3': {
       current: false,
-      name: "branch-to-delete-3",
-      commit: "785b109",
-      label: "new work",
+      name: 'branch-to-delete-3',
+      commit: '785b109',
+      label: 'new work'
     },
-    "current-branch": {
+    'current-branch': {
       current: true,
-      name: "current-branch",
-      commit: "9eeb873",
-      label: "current branch",
+      name: 'current-branch',
+      commit: '9eeb873',
+      label: 'current branch'
     },
     main: {
       current: true,
-      name: "main",
-      commit: "e14c7e1",
-      label: "back to gitbelt",
+      name: 'main',
+      commit: 'e14c7e1',
+      label: 'back to gitbelt'
     },
-    "remotes/origin/current-branch": {
+    'remotes/origin/current-branch': {
       current: false,
-      name: "remotes/origin/current-branch",
-      commit: "9eeb873",
-      label: "current branch",
+      name: 'remotes/origin/current-branch',
+      commit: '9eeb873',
+      label: 'current branch'
     },
-    "remotes/origin/main": {
+    'remotes/origin/main': {
       current: false,
-      name: "remotes/origin/main",
-      commit: "e14c7e1",
-      label: "back to gitbelt",
+      name: 'remotes/origin/main',
+      commit: 'e14c7e1',
+      label: 'back to gitbelt'
     },
-    "remotes/origin/remote-branch": {
+    'remotes/origin/remote-branch': {
       current: false,
-      name: "remotes/origin/remote-branch",
-      commit: "e14c7e1",
-      label: "remote branch",
-    },
+      name: 'remotes/origin/remote-branch',
+      commit: 'e14c7e1',
+      label: 'remote branch'
+    }
   },
-  current: "current-branch",
-  detached: false,
-};
+  current: 'current-branch',
+  detached: false
+}
